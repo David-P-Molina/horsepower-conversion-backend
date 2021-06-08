@@ -4,7 +4,7 @@ class CreateStandardizedMeasurements < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :description
       t.string :type
-      t.string :unit_of_measurement
+      t.integer :unit_of_measurement
 
       t.timestamps
     end
