@@ -5,7 +5,7 @@ class CreateStrangeMeasurements < ActiveRecord::Migration[6.1]
       t.string :description
       t.string :type
       t.integer :unit_of_measurement
-
+      t.string :source
 
       t.timestamps
     end
