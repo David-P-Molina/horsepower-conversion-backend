@@ -1,0 +1,2 @@
+class StrangeMeasurement < ApplicationRecord
+end
