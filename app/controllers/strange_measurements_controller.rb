@@ -1,2 +1,0 @@
-class StrangeMeasurementsController < ApplicationController
-end

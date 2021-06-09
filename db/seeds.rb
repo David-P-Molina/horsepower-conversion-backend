@@ -6,9 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #Standard Measurements
-foot = Measurement.new(name: "Foot", type: "Length", unit_of_measurement: 12, standard: true)
-inch = Measurement.new(name: "Inch", type: "Length", unit_of_measurement: 1, standard: true)
-horsepower = Measurement.new(name: "Horse-Power", type: "Energy", unit_of_measurement: 1, standard: true)
+User.find_or_create_by(username: "test")
+Conversion.find_or_create_by(user_id: 1, measure_1_quantity: 1, measure_2_quantity: 12) 
+
+foot = Measurement.find_or_create_by(name: "Foot", kind: "Length", unit_of_measurement: 12, standard: true)
+inch = Measurement.find_or_create_by(name: "Inch", kind: "Length", unit_of_measurement: 1, standard: true)
+horsepower = Measurement.find_or_create_by(name: "Horse-Power", kind: "Energy", unit_of_measurement: 1, standard: true)
 #Strange Measurements
-squirrelpower = Measurement.new(name: "Squirrel-Power", type: "Energy", unit_of_measurement: .0007492446677193555, source: "https://eagletalon.net/squirrelpower/", standard: false)
-duckpower = Measurement.new(name: "Duck-Power", type: "Energy", unit_of_measurement: .00333333, source: "https://www.reddit.com/r/theydidthemath/comments/4oyzjm/converting_horsepower_to_duckpower/", standard: false)
+squirrelpower = Measurement.find_or_create_by(name: "Squirrel-Power", kind: "Energy", unit_of_measurement: 0.0007492446677193555, source: "https://eagletalon.net/squirrelpower/", standard: false)
+duckpower = Measurement.find_or_create_by(name: "Duck-Power", kind: "Energy", unit_of_measurement: 0.00333333, source: "https://www.reddit.com/r/theydidthemath/comments/4oyzjm/converting_horsepower_to_duckpower/", standard: false)
