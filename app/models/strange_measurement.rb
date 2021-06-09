@@ -1,2 +1,0 @@
-class StrangeMeasurement < ApplicationRecord
-end

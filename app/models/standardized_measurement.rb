@@ -1,2 +1,0 @@
-class StandardizedMeasurement < ApplicationRecord
-end
