@@ -1,0 +1,2 @@
+class StandardizedMeasurementsController < ApplicationController
+end
