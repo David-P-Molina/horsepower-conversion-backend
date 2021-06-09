@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #Standard Measurements
-foot = StandardizedMeasurement.new(name: "Foot", type: "Length", unit_of_measurement: 12)
-inch = StandardizedMeasurement.new(name: "Inch", type: "Length", unit_of_measurement: 1)
-horsepower = StandardizedMeasurement.new(name: "Horse-Power", type: "Energy", unit_of_measurement: 1)
+foot = Measurement.new(name: "Foot", type: "Length", unit_of_measurement: 12, standard: true)
+inch = Measurement.new(name: "Inch", type: "Length", unit_of_measurement: 1, standard: true)
+horsepower = Measurement.new(name: "Horse-Power", type: "Energy", unit_of_measurement: 1, standard: true)
 #Strange Measurements
-squirrelpower = StangeMeasurement.new(name: "Squirrel-Power", type: "Energy", unit_of_measurement: .0007492446677193555, source: "https://eagletalon.net/squirrelpower/")
-duckpower = StangeMeasurement.new(name: "Duck-Power", type: "Energy", unit_of_measurement: .00333333, source: "https://www.reddit.com/r/theydidthemath/comments/4oyzjm/converting_horsepower_to_duckpower/")
+squirrelpower = Measurement.new(name: "Squirrel-Power", type: "Energy", unit_of_measurement: .0007492446677193555, source: "https://eagletalon.net/squirrelpower/", standard: false)
+duckpower = Measurement.new(name: "Duck-Power", type: "Energy", unit_of_measurement: .00333333, source: "https://www.reddit.com/r/theydidthemath/comments/4oyzjm/converting_horsepower_to_duckpower/", standard: false)
