@@ -14,5 +14,9 @@ inch = Measurement.find_or_create_by(name: "Inch", kind: "Length", unit_of_measu
 watt = Measurement.find_or_create_by(name: "Watt", kind: "Power", unit_of_measurement: 1, standard: true)
 horsepower = Measurement.find_or_create_by(name: "Horse-Power (mechanical)", kind: "Power", unit_of_measurement: 1, standard: true)
 #Strange Measurements
+oxpower = Measurement.find_or_create_by(name: "Ox-Power", kind: "Power", unit_of_measurement: 0.576, source: "https://www.sjsu.edu/faculty/watkins/animalpower.htm", standard: false)
+mulepower = Measurement.find_or_create_by(name: "Mule-Power", kind: "Power", unit_of_measurement: 0.432, source: "https://www.sjsu.edu/faculty/watkins/animalpower.htm", standard: false)
+donkeypower = Measurement.find_or_create_by(name: "Donkey-Power", kind: "Power", unit_of_measurement: 0.216, source: "https://www.sjsu.edu/faculty/watkins/animalpower.htm", standard: false)
+manpower = Measurement.find_or_create_by(name: "Man-Power", kind: "Power", unit_of_measurement: 0.090, source: "https://www.sjsu.edu/faculty/watkins/animalpower.htm", standard: false)
 squirrelpower = Measurement.find_or_create_by(name: "Squirrel-Power", kind: "Power", unit_of_measurement: 0.0007492446677193555, source: "https://eagletalon.net/squirrelpower/", standard: false)
 duckpower = Measurement.find_or_create_by(name: "Duck-Power", kind: "Power", unit_of_measurement: 0.00333333, source: "https://www.reddit.com/r/theydidthemath/comments/4oyzjm/converting_horsepower_to_duckpower/", standard: false)
