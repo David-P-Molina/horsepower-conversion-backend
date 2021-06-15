@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2021_06_09_191049) do
   enable_extension "plpgsql"
 
   create_table "conversions", force: :cascade do |t|
+    t.string "name"
     t.float "measure_1_quantity"
     t.float "measure_2_quantity"
     t.bigint "user_id"
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(version: 2021_06_09_191049) do
   create_table "measurement_conversions", force: :cascade do |t|
     t.bigint "measurement_id", null: false
     t.bigint "conversion_id", null: false
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["conversion_id"], name: "index_measurement_conversions_on_conversion_id"
