@@ -3,19 +3,19 @@ class MeasurementsController < ApplicationController
   
     # GET /measurements
     def index
-      @measurements = measurement.all
+      @measurements = Measurement.all
   
       render json: @measurements
     end
   
     # GET /measurements/1
     def show
-      render json: @measurement
+      render json: @measurement.slice(:id, :name, :hp_value, :standard, :source)
     end
   
     # POST /measurements
     def create
-      @measurement = measurement.new(measurement_params)
+      @measurement = Measurement.new(measurement_params)
   
       if @measurement.save
         render json: @measurement, status: :created, location: @measurement
@@ -41,7 +41,7 @@ class MeasurementsController < ApplicationController
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_measurement
-        @measurement = measurement.find(params[:id])
+        @measurement = Measurement.find(params[:id])
       end
   
       # Only allow a list of trusted parameters through.
