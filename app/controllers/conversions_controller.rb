@@ -46,6 +46,6 @@ class ConversionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def conversion_params
-      params.require(:conversion).permit(:measure_1_quantity, :measure_2_quantity, :references)
+      params.require(:conversion).permit(:measure_1_quantity, :measure_2_quantity, :name, :references)
     end
 end
