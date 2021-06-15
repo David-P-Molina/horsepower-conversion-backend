@@ -4,13 +4,12 @@ class MeasurementsController < ApplicationController
     # GET /measurements
     def index
       @measurements = Measurement.all
-  
-      render json: @measurements
+      render json: @measurements, except: [:updated_at, :created_at]
     end
   
     # GET /measurements/1
     def show
-      render json: @measurement.slice(:id, :name, :hp_value, :standard, :source)
+      render json: @measurement.slice(:id, :name, :hp_value, :source, :standard)
     end
   
     # POST /measurements
