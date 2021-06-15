@@ -10,7 +10,7 @@ class ConversionsController < ApplicationController
 
   # GET /conversions/1
   def show
-    render json: @conversion
+    render json: @conversion.slice(:id, :name, :username, :measure_1_quantity, :measure_2_quantity)
   end
 
   # POST /conversions
