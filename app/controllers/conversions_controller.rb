@@ -1,5 +1,5 @@
 class ConversionsController < ApplicationController
-  before_action :set_conversion, only: [:show, :update, :destroy]
+  before_action :set_conversion, only: [:show]
 
   # GET /conversions
   def index
