@@ -45,7 +45,7 @@ class MeasurementsController < ApplicationController
   
       # Only allow a list of trusted parameters through.
       def measurement_params
-        params.require(:measurement).permit(:hp_value, :source, :standard, :name, :references)
+        params.require(:measurement).permit(:hp_equivalent, :animal_power_to_hp, :source, :standard, :name, :references)
       end
   end
   
