@@ -37,7 +37,8 @@ ActiveRecord::Schema.define(version: 2021_06_09_191049) do
 
   create_table "measurements", force: :cascade do |t|
     t.string "name"
-    t.float "hp_value"
+    t.float "animal_power_to_hp"
+    t.float "hp_equivalent"
     t.string "source"
     t.boolean "standard"
     t.datetime "created_at", precision: 6, null: false

@@ -9,7 +9,7 @@ class MeasurementsController < ApplicationController
   
     # GET /measurements/1
     def show
-      render json: @measurement.slice(:id, :name, :hp_value, :source, :standard)
+      render json: @measurement.slice(:id, :name, :animal_power_to_hp, :hp_equivalent, :source, :standard)
     end
   
     # POST /measurements
