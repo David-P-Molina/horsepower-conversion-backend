@@ -13,29 +13,29 @@ class MeasurementsController < ApplicationController
     end
   
     # POST /measurements
-    def create
-      @measurement = Measurement.new(measurement_params)
+    # def create
+    #   @measurement = Measurement.new(measurement_params)
   
-      if @measurement.save
-        render json: @measurement, status: :created, location: @measurement
-      else
-        render json: @measurement.errors, status: :unprocessable_entity
-      end
-    end
+    #   if @measurement.save
+    #     render json: @measurement, status: :created, location: @measurement
+    #   else
+    #     render json: @measurement.errors, status: :unprocessable_entity
+    #   end
+    # end
   
     # PATCH/PUT /measurements/1
-    def update
-      if @measurement.update(measurement_params)
-        render json: @measurement
-      else
-        render json: @measurement.errors, status: :unprocessable_entity
-      end
-    end
+    # def update
+    #   if @measurement.update(measurement_params)
+    #     render json: @measurement
+    #   else
+    #     render json: @measurement.errors, status: :unprocessable_entity
+    #   end
+    # end
   
     # DELETE /measurements/1
-    def destroy
-      @measurement.destroy
-    end
+    # def destroy
+    #   @measurement.destroy
+    # end
   
     private
       # Use callbacks to share common setup or constraints between actions.
