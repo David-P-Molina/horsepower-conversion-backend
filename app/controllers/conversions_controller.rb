@@ -25,18 +25,18 @@ class ConversionsController < ApplicationController
   end
 
   # PATCH/PUT /conversions/1
-  def update
-    if @conversion.update(conversion_params)
-      render json: @conversion
-    else
-      render json: @conversion.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @conversion.update(conversion_params)
+  #     render json: @conversion
+  #   else
+  #     render json: @conversion.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /conversions/1
-  def destroy
-    @conversion.destroy
-  end
+  # def destroy
+  #   @conversion.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
