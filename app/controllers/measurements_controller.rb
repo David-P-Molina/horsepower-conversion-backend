@@ -4,7 +4,7 @@ class MeasurementsController < ApplicationController
     # GET /measurements
     def index
       @measurements = Measurement.all
-      render json: @measurements, except: [:updated_at, :created_at]
+      render json: MeasurementSerializer.new(@measurements)
     end
   
     # GET /measurements/1
