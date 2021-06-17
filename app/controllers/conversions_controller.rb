@@ -5,7 +5,7 @@ class ConversionsController < ApplicationController
   def index
     @conversions = Conversion.all
     #Figure out how to add username to json(Currently not working)
-    render json: @conversions, only: [:id, :name, :username, :measure_1_quantity, :measure_2_quantity]
+    render json: @conversions, only: [:id, :name, :user_id, :username, :measure_1_quantity, :measure_2_quantity]
   end
 
   # GET /conversions/1
