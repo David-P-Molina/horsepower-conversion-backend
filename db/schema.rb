@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2021_06_09_191049) do
 
   create_table "conversions", force: :cascade do |t|
     t.string "name"
-    t.float "measure_1_quantity"
-    t.float "measure_2_quantity"
+    t.float "hp_quantity"
+    t.float "animal_conversion_quantity"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

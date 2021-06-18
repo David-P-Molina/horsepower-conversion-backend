@@ -1,4 +1,4 @@
 class ConversionSerializer
   include JSONAPI::Serializer
-  attributes :id, :name, :user_id, :username, :measure_1_quantity, :measure_2_quantity
+  attributes :id, :name, :user_id, :username, :hp_quantity, :animal_conversion_quantity
 end
