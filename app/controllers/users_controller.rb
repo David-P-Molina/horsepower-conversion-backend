@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :set_user, only: [:show, :create]
+    before_action :set_user, only: [:show]
     
     #GET /users
     def index
@@ -9,14 +9,15 @@ class UsersController < ApplicationController
 
     #GET /users/1
     def show
-        render json: @user.slice(:id, :username)
+        render json: UserSerializer.new(@user)
     end
      # POST /users
     def create
-      @user = User.new(user_params)
+
+      @user = User.find_or_create_by(user_params)
   
       if @user.save
-        render json: @user, status: :created, location: @user
+        render json: UserSerializer.new(@user), status: :created
       else
         render json: @user.errors, status: :unprocessable_entity
       end
@@ -41,6 +42,6 @@ class UsersController < ApplicationController
             @user = User.find(params[:id])
         end
         def user_params
-            params.require(:users).permit(:username)
+            params.require(:user).permit(:username)
         end
 end
