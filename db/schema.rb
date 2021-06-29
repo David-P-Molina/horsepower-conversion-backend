@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_06_09_191049) do
     t.string "name"
     t.float "hp_quantity"
     t.float "animal_conversion_quantity"
+    t.string "animal_type"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

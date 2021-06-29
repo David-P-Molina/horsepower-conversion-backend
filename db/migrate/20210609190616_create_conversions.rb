@@ -4,6 +4,7 @@ class CreateConversions < ActiveRecord::Migration[6.1]
       t.string :name
       t.float :hp_quantity
       t.float :animal_conversion_quantity
+      t.string :animal_type
       t.references :user, foreign_key: {on_delete: :cascade}
 
       t.timestamps

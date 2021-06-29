@@ -10,7 +10,7 @@ class ConversionsController < ApplicationController
 
   # GET /conversions/1
   def show
-    render json: @conversion.slice(:id, :name, :user_id, :username, :hp_quantity, :animal_conversion_quantity)
+    render json: @conversion.slice(:id, :name, :user_id, :username, :animal_type, :hp_quantity, :animal_conversion_quantity)
   end
 
   # POST /conversions
@@ -46,6 +46,6 @@ class ConversionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def conversion_params
-      params.require(:conversion).permit(:hp_quantity, :animal_conversion_quantity, :user_id, :name, :references)
+      params.require(:conversion).permit(:hp_quantity, :animal_conversion_quantity, :animal_type, :user_id, :name, :references)
     end
 end
