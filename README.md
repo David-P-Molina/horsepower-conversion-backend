@@ -1,5 +1,5 @@
-# Horse-Power Converter: Backend Rails-API
-Thank You for using the Horse-Power Converter! 
+# Horsepower Converter: Backend Rails-API
+Thank You for using the Horsepower Converter! 
 This repository contains the Ruby on Rails API that stores objects created by the Frontend. Don't forget to initialize this when starting the application otherwise you will be accessing a very empty website shell.
 This SPA(Single Page Application)'s frontend can be found at. (https://github.com/David-P-Molina/horsepower-conversion-calculator)
 
@@ -13,7 +13,7 @@ cd horsepower-conversion-calculator
 ```
 #### Backend
 ```shell
-git clone https://github.com/David-P-Molina/horsepower-conversion-calculator-backend
+git clone https://github.com/David-P-Molina/horsepower-conversion-backend
 ```
 ## Starting The Application
 ### Install dependencies
